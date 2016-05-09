@@ -5,8 +5,8 @@
 #include<math.h>
 #include<time.h>
 #include<stdint.h>
-#include<gsl/gsl_rng.h>
 #include<gsl/gsl_randist.h>
+#include<gsl/gsl_rng.h>
 #include<assert.h>
 
 #define TBB
