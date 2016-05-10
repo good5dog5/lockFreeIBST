@@ -206,9 +206,9 @@ int main(int argc, char *argv[])
 	unsigned long totalOperations = totalReadCount + totalInsertCount + totalDeleteCount;
 	MOPS = totalOperations/(runTime.tv_sec*1000000.0);
 	printf("max key size:%d\n",atoi(argv[6]));
-	printf("find:%d%\n",findPercent);
-	printf("insert:%d%\n",insertPercent-findPercent);
-	printf("delete:%d%\n",deletePercent-insertPercent);
+	printf("find:%d\n",findPercent);
+	printf("insert:%d\n",insertPercent-findPercent);
+	printf("delete:%d\n",deletePercent-insertPercent);
 	printf("num of thread:%d\n",NUM_OF_THREADS);
 	printf("size:%ld\n",size());
 	printf("totalReadCount:%ld\n",totalReadCount);
