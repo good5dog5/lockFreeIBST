@@ -205,6 +205,21 @@ int main(int argc, char *argv[])
   }
 	unsigned long totalOperations = totalReadCount + totalInsertCount + totalDeleteCount;
 	MOPS = totalOperations/(runTime.tv_sec*1000000.0);
+	printf("max key size:%d\n",atoi(argv[6]));
+	printf("find:%d%\n",findPercent);
+	printf("insert:%d%\n",insertPercent-findPercent);
+	printf("delete:%d%\n",deletePercent-insertPercent);
+	printf("num of thread:%d\n",NUM_OF_THREADS);
+	printf("size:%ld\n",size());
+	printf("totalReadCount:%ld\n",totalReadCount);
+	printf("totalInsertCount:%ld\n",totalInsertCount);
+	printf("totalDeleteCount:%ld\n",totalDeleteCount);
+	printf("totalReadRetries:%ld\n",totalReadRetries);
+	printf("totalSeekRetries:%ld\n",totalSeekRetries);
+	printf("totalInsertRetries:%ld\n",totalInsertRetries);
+	printf("totalDeleteRetries:%.2f\n",totalDeleteRetries);
+	printf("length/oper:%.2f\n",totalSeekLength*1.0/totalOperations);
+	printf("Mops:%.2f\n",MOPS);
 	printf("k%d;%d-%d-%d;%d;%ld;%ld;%ld;%ld;%ld;%ld;%ld;%ld;%.2f;%.2f\n",atoi(argv[6]),findPercent,(insertPercent-findPercent),(deletePercent-insertPercent),NUM_OF_THREADS,size(),totalReadCount,totalInsertCount,totalDeleteCount,totalReadRetries,totalSeekRetries,totalInsertRetries,totalDeleteRetries,totalSeekLength*1.0/totalOperations,MOPS);
 	assert(isValidTree());
 	pthread_exit(NULL);
