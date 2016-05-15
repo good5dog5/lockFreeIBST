@@ -16,5 +16,7 @@ OBJ= ./bin/lockFreeIbst.o
 EXEC = Test 
 all: 
 	$(CXX) $(CFLAGS) $(TBBFLAGS) $(JEMALLOCFLAGS) -o $(OBJ) $(SRC) $(GSLFLAGS) 
+doc:
+	@doxygen proj.conf
 clean:
 	rm -rf ./bin/*.*
